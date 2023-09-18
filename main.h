@@ -1,6 +1,6 @@
-#ifndef MAIN_H //Main.h define
+#ifndef MAIN_H /* Main.h define */
 #define MAIN_H
-#include <stdarg.h> //Heades for the printc file
+#include <stdarg.h> /* Heades for the printc file */
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -112,7 +112,7 @@ int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
 
-/****************** UTILS ******************/
+/* ----------- UTILS ----------- */
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);

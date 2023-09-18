@@ -20,28 +20,29 @@ int _printf(const char *format, ...){
     int chara_print = 0;
     va_list list_of_args;
 
-    // if (format == NULL){
-    //     return (-1);
-    // }
+    /** if (format == NULL){
+     *     return (-1);
+     * }
+     */
 
     va_start(list_of_args, format);
 
-    while (*format) // iterates through all the characters in the format string
+    while (*format) /* iterates through all the characters in the format string */
     {
         if (*format != '%')
         {
             write(1, format, 1);
             chara_print++;
         }
-        else{ //if format is % sign
-            format++; //skips % amd then checks the next character
+        else{ /* if format is % sign */
+            format++;
         
             if (*format == '\0'){
                 break;
             }
 
             if (*format == '%')
-            { //handles double % "%%"
+            {
                 write(1, format, 1);
                 chara_print++;
             }
@@ -56,7 +57,7 @@ int _printf(const char *format, ...){
                 char *str = va_arg(list_of_args, char*);
                 int str_len = 0;
 
-                //calculate the string length
+                /* calculate the string length */
                 while (str[str_len] != '\0'){
                     str_len++;
                 }
