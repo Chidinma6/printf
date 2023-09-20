@@ -90,7 +90,7 @@ int write_number(int is_positive, int ind, char buffer[], int flags, int width, 
 int write_num(int ind, char bff[], int flags, int width, int precision, int length, char padd, char extra_c);
 
 /* ---------- UTIL ---------- */
-int is_printable(char);
+int printable_char(char);
 long int convert_size_unsgnd(unsigned long int num, int size);
 int is_digit(char);
 int append_hexa_code(char, char[], int);
