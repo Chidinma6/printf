@@ -91,10 +91,10 @@ int write_num(int ind, char bff[], int flags, int width, int precision, int leng
 
 /* ---------- UTIL ---------- */
 int printable_char(char);
-long int convert_size_unsgnd(unsigned long int num, int size);
-int is_digit(char);
-int append_hexa_code(char, char[], int);
-long int convert_size_number(long int num, int size);
+long int convert_unsgnd_sizes(unsigned long int num, int size);
+int digit_char(char);
+int append_hexa(char, char[], int);
+long int convert_size(long int num, int size);
 
 #endif
 
